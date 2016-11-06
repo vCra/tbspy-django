@@ -1,0 +1,3 @@
+"""Event views, and urls"""
+
+

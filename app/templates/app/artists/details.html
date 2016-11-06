@@ -1,0 +1,27 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+{% for artist in artistList %}
+<h2>{{ title }} - {{ thing.name }}.</h2>x
+
+    <div class="col-md-4">
+        <p>{{thing.details}}</p>
+        <h3>Upcoming Tours</h3>
+
+        <div class="list-group">
+        {% for tour in filtedTourList %}
+        <div class="list-group-item">
+            <div class="list-group-item-text" href="/tour/detail/{{tour.id}}">{{tour.name}}</div>    
+        </div>         
+
+        {% endfor %}
+        </div>
+        
+    </div>
+
+{% endfor %}
+
+
+
+
+{% endblock %}

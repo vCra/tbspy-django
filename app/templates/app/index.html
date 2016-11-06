@@ -1,0 +1,32 @@
+
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Ticket Booking system</h1>
+    <p class="lead">This is a test.</p>
+    <p><a href="/accounts/login" class="btn btn-primary btn-large">Login &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Venues</h2>
+        <p>
+            See all of the venues that we provide Events for here!
+        </p>
+        <p><a class="btn btn-default" href="/venue/all">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Thing Two</h2>
+        <p>Thing Two goes here</p>
+        <p><a class="btn btn-default" href="/things/two">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Thing Three</h2>
+        <p>Thing Three goes here</p>
+        <p><a class="btn btn-default" href="/things/three">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+{% endblock %}

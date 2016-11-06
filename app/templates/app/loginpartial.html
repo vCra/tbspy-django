@@ -1,0 +1,33 @@
+{% if user.is_authenticated %}
+    <form id="logoutForm" action="/accounts/logout" method="get" class="navbar-right">
+        {% csrf_token %}
+        <ul class="nav navbar-nav navbar-right">
+            <li><span class="navbar-brand">
+            {% if request.user.first_name or request.user.last_name %}
+                {{ request.user.first_name }} {{ request.user.last_name }}
+            {% else %}
+                {{ request.user.username }}
+            {% endif %}
+            !
+            {% if not request.user.profile.account_verified %}
+                (unverified)
+            {% endif %}
+            </span></li>
+            <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+        </ul>
+
+    </form>
+
+{% else %}
+
+<ul class="nav navbar-nav navbar-right">
+    <li><a href="/accounts/login">Log in</a></li>
+</ul>
+
+{% endif %}
+
+
+    
+
+ 
+
